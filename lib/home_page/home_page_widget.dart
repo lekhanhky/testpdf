@@ -62,6 +62,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  'https://picsum.photos/seed/552/600',
+                  width: 200.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
               Align(
                 alignment: const AlignmentDirectional(0.0, -1.0),
                 child: FFButtonWidget(
@@ -84,15 +93,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/552/600',
-                  width: 200.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
                 ),
               ),
             ],
